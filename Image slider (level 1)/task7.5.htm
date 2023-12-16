@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+*
+{
+margin:0px;
+}
+#slider
+{
+height:100%;
+width:100%;
+background:rgba(0,256,160,0.3);
+}
+
+
+img
+{
+height:600px;
+width:1200px;
+border-radius:30px;
+box-shadow:0px 0px 20px 20px black;
+}
+
+</style>
+
+<script>
+var arr=["img/a1.jpg","img/a2.jpg","img/a3.jpg","img/a4.jpg","img/a5.jpg","img/a6.jpg"];
+var txt=["20px groove blue","20px groove orange","20px groove green","20px groove gray","20px groove pink","20px groove red"];
+var txt1=["blue","orange","green","gray","pink","red"]
+i=0;
+function slider()
+{
+var im=document.getElementById("r1");
+var m=document.getElementById("w1");
+im.src=arr[i];
+im.style.border=txt[i];
+m.style.color=txt1[i];
+i++;
+if(i==5)
+i=0;
+}
+window.setInterval("slider()",2000);
+</script>
+</head>
+<body onload="slider()">
+<center>
+
+<div id="slider"> 
+<h1 id="w1"> MAKE SLIDER USING JAVA SCRIPT</h1>
+<br/><br/>s
+<img src="img/a1.jpg" id="r1"/>
+
+
+</div>
+ </center>
+</body>
+</html>
